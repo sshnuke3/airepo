@@ -72,7 +72,7 @@ try {
     // 输出json格式的字符串回包
     $p_d=base64_decode(json_decode($resp->toJsonString(), true)["ResultImage"]);
     file_put_contents("out.jpg", $p_d);
-    echo '<a href="out.jpg">点击查看图片</a>';
+    echo '<a href="out.jpg" target="_blank">点击查看图片</a>';
 }
 catch(TencentCloudSDKException $e) {
     echo $e;
